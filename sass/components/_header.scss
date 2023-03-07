@@ -1,0 +1,91 @@
+.header {
+  position: relative;
+  background-color: var(--secondary-text-color);
+  border-bottom: 1px solid #ececec;
+  height: 60px;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
+}
+.contacts-icon {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-contacts {
+    display: none;
+  }
+}
+.header-contacts {
+  @media screen and (min-width: 768px) {
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+
+    align-items: center;
+    &__item:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &__item:nth-child(1) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+    align-items: center;
+  }
+  // &__link {
+  //   margin-top: 10px;
+  // }
+
+  &__link {
+    color: var(--title-text-color);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    transition: color var(--trns);
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: var(--accent-color);
+  }
+
+  &__icon-mail {
+    margin-right: 10px;
+    fill: var(--title-text-color);
+    transition: fill var(--trns);
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+    }
+  }
+  &__icon-phone {
+    margin-right: 10px;
+    fill: var(--title-text-color);
+    transition: fill var(--trns);
+    @media screen and (min-width: 1200px) {
+      width: 10px;
+      height: 16px;
+    }
+  }
+}
